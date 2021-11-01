@@ -1,0 +1,16 @@
+.dockerignore
+.git
+.gitignore
+.travis.yml
+CAKEFILE
+Dockerfile
+node_modules
+Procfile
+README.md
+src
+start_service
+stop_service
+switch_to_develop_easy_setup.sh
+switch_to_develop_locally_offline.sh
+switch_to_producti.sh
+test

@@ -21,6 +21,9 @@
     "supertest": "^3.3.0"
   },
   "scripts": {
+    "docker:build": "docker build -t fielddb/corpus_service .",
+    "docker:compose": "docker-compose rm -f; docker-compose up --build -d",
+    "docker:test": "set -x; curl -v http://localhost:5984; curl -kv http://localhost:3186/_utils/ -X OPTIONS -H 'Access-Control-Request-Method: POST' -H 'Access-Control-Request-Headers: content-type' -H 'Origin: https://corpusdev.example.org'; curl -vk -3 https://localhost:6984; docker-compose stop",
     "test": "HOST=${HOST:-localhost} PORT=${PORT:-3186} NODE_ENV=test mocha test/**/*-spec.js",
     "start": "bin/onlycouchdb.js localhost 3186"
   },
