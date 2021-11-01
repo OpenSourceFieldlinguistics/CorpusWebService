@@ -22,6 +22,7 @@
   },
   "scripts": {
     "docker:build": "docker build -t fielddb/corpus_service .",
+    "docker:compose": "docker-compose rm -f; docker-compose up --build",
     "docker:test": "containerId=$(docker run -p 3186:3186 -d fielddb/corpus_service) && echo $containerId; sleep 2; docker logs -n 200 $containerId && curl -kv http://localhost:3186/_utils/ && tail -n 30 docker-test.log && docker stop $containerId",
     "test": "HOST=${HOST:-localhost} PORT=${PORT:-3186} NODE_ENV=test mocha test/**/*-spec.js",
     "start": "bin/onlycouchdb.js localhost 3186"

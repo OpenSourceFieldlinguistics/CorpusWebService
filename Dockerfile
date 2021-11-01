@@ -8,9 +8,9 @@ RUN NODE_ENV=production npm ci
 
 RUN ls -alt; 
 
-ENV DEBUG="*,-express*"
+ENV DEBUG="*"
 ENV NODE_ENV=beta
 
 EXPOSE 3186
 
-CMD [ "node", "bin/onlycouchdb.js", "localhost", "3186" ]
+CMD [ "node", "bin/onlycouchdb.js", "0.0.0.0", "3186" ]
