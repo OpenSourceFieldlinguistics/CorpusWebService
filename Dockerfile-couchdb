@@ -2,7 +2,5 @@ FROM couchdb:1.6.1
 
 RUN mkdir -p /data/logs/corpus
 
-COPY etc/local.ini /opt/couchdb/etc
-COPY fielddb_debug.* /opt/couchdb/etc
-
-RUN ls -alt /opt/couchdb/etc
+COPY etc/local.ini /usr/local/etc/couchdb
+COPY fielddb_debug.* /usr/local/etc/couchdb

@@ -3,6 +3,7 @@
 ### docker-compose up --build --no-cache --force-recreate  -d
 ### docker-compose logs -f
 ### docker container list
+### docker exec -it $containerId /bin/bash
 
 ############## Docs ##############################
 # https://hub.docker.com/_/couchdb
@@ -13,9 +14,6 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile-couchdb
-    environment:
-      - COUCHDB_USER=admin
-      - COUCHDB_PASSWORD=none
     ports:
       - 5984:5984
       - 6984:6984
