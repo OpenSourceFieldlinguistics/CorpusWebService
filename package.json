@@ -12,8 +12,7 @@
     "email": "cesine@yahoo.com"
   },
   "dependencies": {
-    "http-proxy": "0.8.7",
-    "forever": "0.15.1"
+    "http-proxy": "0.8.7"
   },
   "devDependencies": {
     "chai": "^4.2.0",
